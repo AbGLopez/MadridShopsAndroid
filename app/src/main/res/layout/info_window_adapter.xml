@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/default_padding"
-    tools:context="com.keepcoding.madridshops.adapter.InfoShopWindowAdapter">
+    tools:context="com.keepcoding.madridshops.adapter.ShopAdapter">
 
     <ImageView
         android:id="@+id/info_window_image"

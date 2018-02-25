@@ -24,7 +24,7 @@ data class Shop(val id: Long,
 }
 
 /**
- * Métodos de shops
+ * Shops Methods
  */
 data class Shops(val shops: MutableList<Shop>) : Aggregate<Shop> {
     override fun count(): Int {

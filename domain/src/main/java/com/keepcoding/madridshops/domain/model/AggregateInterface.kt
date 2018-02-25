@@ -17,7 +17,4 @@ interface WriteAggregate<T> {
 
 interface Aggregate<T>: ReadAggregate<T>, WriteAggregate<T>
 
-/**
- * Interface sin agregados para
- */
 interface Marker

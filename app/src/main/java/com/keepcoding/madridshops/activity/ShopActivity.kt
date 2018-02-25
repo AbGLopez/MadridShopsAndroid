@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.keepcoding.madridshops.R
-import com.keepcoding.madridshops.adapter.InfoShopWindowAdapter
+import com.keepcoding.madridshops.adapter.ShopAdapter
 import com.keepcoding.madridshops.domain.interactor.ErrorCompletion
 import com.keepcoding.madridshops.domain.interactor.SuccessCompletion
 import com.keepcoding.madridshops.domain.interactor.getallshops.GetAllShopsInteractor
@@ -98,7 +98,7 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
 
             showUserPosition(baseContext, mapa)
 
-            mapa.setInfoWindowAdapter(InfoShopWindowAdapter(this))
+            mapa.setInfoWindowAdapter(ShopAdapter(this))
 
             map = mapa
 

@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.keepcoding.madridshops.R
-import com.keepcoding.madridshops.adapter.InfoActivityWindowAdapter
+import com.keepcoding.madridshops.adapter.ActivityAdapter
 import com.keepcoding.madridshops.domain.interactor.ErrorCompletion
 import com.keepcoding.madridshops.domain.interactor.SuccessCompletion
 import com.keepcoding.madridshops.domain.interactor.getallactivities.GetAllActivitiesInteractor
@@ -98,7 +98,7 @@ class MapActivity : AppCompatActivity(), ActivitiesListFragment.OnShowActivityDe
 
             showUserPosition(baseContext, mapa)
 
-            mapa.setInfoWindowAdapter(InfoActivityWindowAdapter(this))
+            mapa.setInfoWindowAdapter(ActivityAdapter(this))
 
             map = mapa
 
@@ -163,7 +163,7 @@ class MapActivity : AppCompatActivity(), ActivitiesListFragment.OnShowActivityDe
 
             map?.setOnInfoWindowClickListener {
                 if (it.tag is Activity) {
-                    Router().navigateFromActivityActivityToActivityDetailActivity(this, it.tag as Activity)
+                    Router().navigateFromMapActivityToMapDetailActivity(this, it.tag as Activity)
                 }
             }
         }
@@ -178,6 +178,6 @@ class MapActivity : AppCompatActivity(), ActivitiesListFragment.OnShowActivityDe
     }
 
     override fun showActivityDetail(activity: Activity) {
-        Router().navigateFromActivityActivityToActivityDetailActivity(this, activity)
+        Router().navigateFromMapActivityToMapDetailActivity(this, activity)
     }
 }

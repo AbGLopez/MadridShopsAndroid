@@ -23,14 +23,14 @@ class Router {
     }
 
 
-    fun navigateFromActivityActivityToActivityDetailActivity(currentActivity: MapActivity, activity: Activity) {
+    fun navigateFromMapActivityToMapDetailActivity(currentActivity: MapActivity, activity: Activity) {
         val intent = Intent(currentActivity, MapDetailActivity::class.java)
         intent.putExtra(INTENT_ACTIVITY_DETAIL, activity)
 
         currentActivity.startActivity(intent)
     }
 
-    fun navigateFromMainActivityToActivityActivity(currentActivity: MainActivity) {
+    fun navigateFromMainActivityMapActivity(currentActivity: MainActivity) {
         val intent = Intent(currentActivity, MapActivity::class.java)
 
         currentActivity.startActivity(intent)

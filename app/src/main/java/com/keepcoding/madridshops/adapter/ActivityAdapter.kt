@@ -15,7 +15,7 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.info_window_adapter.view.*
 
-class InfoActivityWindowAdapter(val context: Context) : GoogleMap.InfoWindowAdapter {
+class ActivityAdapter(val context: Context) : GoogleMap.InfoWindowAdapter {
 
     @SuppressLint("InflateParams")
     override fun getInfoContents(m: Marker): View {

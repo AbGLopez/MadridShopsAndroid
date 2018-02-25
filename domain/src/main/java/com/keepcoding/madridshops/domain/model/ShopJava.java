@@ -25,7 +25,6 @@ public final class ShopJava {
         return name;
     }
 
-    // Se indica que name no puede cambiar (final) y que no puede pasar Null
     public void setName(final @NonNull String name) {
         assert (name != null);
         this.name = name;
@@ -45,16 +44,3 @@ public final class ShopJava {
         shop1.getAddress();
     }
 }
-/*
-class HijaDeShop extends ShopJava {
-    public HijaDeShop(String name) {
-        super(name);
-    }
-
-    @Override
-    public void setAddress(String address) {
-        //super.setAddress(address);
-        // No se llama a super y se realiza otra acción distinta
-    }
-}
-*/
