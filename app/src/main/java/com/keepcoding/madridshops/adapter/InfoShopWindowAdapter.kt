@@ -10,7 +10,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 import com.keepcoding.madridshops.R
 import com.keepcoding.madridshops.domain.model.Shop
-import com.keepcoding.madridshops.utis.getShopText
+import com.keepcoding.madridshops.tools.getShopText
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.info_window_adapter.view.*
@@ -62,5 +62,5 @@ class MarkerCallback(val marker: Marker,
         }
     }
 
-    override fun onError() { Log.d("PICASSO", "💩 Error updating pinView image on googleMap.") }
+    override fun onError() { Log.d("PICASSO", "Error updating pinView image on googleMap.") }
 }

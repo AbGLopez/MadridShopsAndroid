@@ -26,19 +26,19 @@ import com.keepcoding.madridshops.domain.model.Activities
 import com.keepcoding.madridshops.domain.model.Activity
 import com.keepcoding.madridshops.fragment.ActivitiesListFragment
 import com.keepcoding.madridshops.router.Router
-import com.keepcoding.madridshops.utis.getActivityText
-import kotlinx.android.synthetic.main.activity_activity.*
+import com.keepcoding.madridshops.tools.getActivityText
+import kotlinx.android.synthetic.main.activity_map.*
 import kotlinx.android.synthetic.main.content_activity.*
 
 
-class ActivityActivity : AppCompatActivity(), ActivitiesListFragment.OnShowActivityDetail {
+class MapActivity : AppCompatActivity(), ActivitiesListFragment.OnShowActivityDetail {
 
     private var activitiesListFragment: ActivitiesListFragment? = null
     private var map: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_activity)
+        setContentView(R.layout.activity_map)
         setSupportActionBar(toolbar)
 
         // Configuración del MapFragment
@@ -61,7 +61,7 @@ class ActivityActivity : AppCompatActivity(), ActivitiesListFragment.OnShowActiv
 
         }, object : ErrorCompletion {
             override fun errorCompletion(errorMessage: String) {
-                AlertDialog.Builder(this@ActivityActivity)
+                AlertDialog.Builder(this@MapActivity)
                         .setTitle("Error")
                         .setMessage("Conexion Error. Unable connect to server.")
                         .setPositiveButton("Retry?", { dialog, which ->

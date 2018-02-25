@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".activity.ActivityDetailActivity">
+    tools:context=".activity.MapDetailActivity">
 
 
     <android.support.constraint.ConstraintLayout
@@ -15,12 +15,11 @@
         <ImageView
             android:id="@+id/activity_image"
             android:layout_width="393dp"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@mipmap/ic_launcher" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/activity_name"
@@ -31,8 +30,7 @@
             android:textSize="@dimen/text_size_title"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_image"
-            tools:text="SHOP DETAIL SCREEN" />
+            app:layout_constraintTop_toBottomOf="@+id/activity_image"/>
 
         <TextView
             android:id="@+id/activity_description"

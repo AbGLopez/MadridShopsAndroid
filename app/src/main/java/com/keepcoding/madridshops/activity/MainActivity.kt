@@ -7,8 +7,8 @@ import android.view.View
 import com.keepcoding.madridshops.R
 import com.keepcoding.madridshops.domain.interactor.internetstatus.InternetStatusInteractorImpl
 import com.keepcoding.madridshops.router.Router
-import com.keepcoding.madridshops.utis.getAlertButtonText
-import com.keepcoding.madridshops.utis.getButtonText
+import com.keepcoding.madridshops.tools.getAlertButtonText
+import com.keepcoding.madridshops.tools.getButtonText
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

@@ -4,8 +4,8 @@ import android.content.Intent
 import com.keepcoding.madridshops.activity.*
 import com.keepcoding.madridshops.domain.model.Activity
 import com.keepcoding.madridshops.domain.model.Shop
-import com.keepcoding.madridshops.utis.INTENT_ACTIVITY_DETAIL
-import com.keepcoding.madridshops.utis.INTENT_SHOP_DETAIL
+import com.keepcoding.madridshops.tools.INTENT_ACTIVITY_DETAIL
+import com.keepcoding.madridshops.tools.INTENT_SHOP_DETAIL
 
 class Router {
 
@@ -23,15 +23,15 @@ class Router {
     }
 
 
-    fun navigateFromActivityActivityToActivityDetailActivity(currentActivity: ActivityActivity, activity: Activity) {
-        val intent = Intent(currentActivity, ActivityDetailActivity::class.java)
+    fun navigateFromActivityActivityToActivityDetailActivity(currentActivity: MapActivity, activity: Activity) {
+        val intent = Intent(currentActivity, MapDetailActivity::class.java)
         intent.putExtra(INTENT_ACTIVITY_DETAIL, activity)
 
         currentActivity.startActivity(intent)
     }
 
     fun navigateFromMainActivityToActivityActivity(currentActivity: MainActivity) {
-        val intent = Intent(currentActivity, ActivityActivity::class.java)
+        val intent = Intent(currentActivity, MapActivity::class.java)
 
         currentActivity.startActivity(intent)
     }

@@ -26,7 +26,7 @@ import com.keepcoding.madridshops.domain.model.Shop
 import com.keepcoding.madridshops.domain.model.Shops
 import com.keepcoding.madridshops.fragment.ShopsListFragment
 import com.keepcoding.madridshops.router.Router
-import com.keepcoding.madridshops.utis.getShopText
+import com.keepcoding.madridshops.tools.getShopText
 import kotlinx.android.synthetic.main.activity_shop.*
 import kotlinx.android.synthetic.main.content_shop.*
 
@@ -56,7 +56,7 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
                 initializeMap(shops)
                 progress_bar.visibility = View.GONE
 
-                setupList(shops)
+                setUpList(shops)
             }
 
         }, object : ErrorCompletion {
@@ -78,7 +78,7 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
         })
     }
 
-    private fun setupList(shops: Shops) {
+    private fun setUpList(shops: Shops) {
         // Puntero al fragment del listado
         shopsListFragment = supportFragmentManager.findFragmentById(R.id.activity_shop_list_fragment) as ShopsListFragment
         if (shops != null) {
@@ -110,13 +110,11 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
 
         val coordinate = LatLng(latitude, longitude)
 
-        // Genera la posicion de la camara
         val cameraPosition = CameraPosition.Builder()
                 .target(coordinate)
                 .zoom(14f)
                 .build()
 
-        // Coloca la camara a raiz de la posicion
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
     }
 
@@ -126,7 +124,7 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
                 != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(context, ACCESS_COARSE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED){
-            // No han dado permisos para la localización
+
             ActivityCompat.requestPermissions(this,
                     arrayOf(ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION),
                     10)
@@ -135,8 +133,6 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
         } else {
             map.isMyLocationEnabled = true
         }
-
-
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -155,10 +151,8 @@ class ShopActivity : AppCompatActivity(), ShopsListFragment.OnShowShopDetail {
         for (index in 0 until shops.count()){
             val shop = shops.get(index)
 
-            // Se verifica que no se llama a posicionar un pin si algun valor no está informado
             if (shop.latitude != null && shop.longitude != null) {
                 addPin(map!!, shop)
-                //addPin(map!!, 40.416775, -3.703790, shop.name)
             }
 
             map?.setOnInfoWindowClickListener {

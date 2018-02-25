@@ -1,4 +1,4 @@
-package com.keepcoding.madridshops.utis
+package com.keepcoding.madridshops.tools
 
 import com.keepcoding.madridshops.domain.model.Activity
 import com.keepcoding.madridshops.domain.model.Shop
@@ -59,13 +59,11 @@ fun getShopText(shop: Shop, option: String): String {
         }
     }
 
-
     return result
 }
 
 fun getActivityText(activity: Activity, option: String): String {
     var result = ""
-
     if (option == "description") {
         when (getLanguage()) {
             "es" -> result = activity.description_es
@@ -77,8 +75,6 @@ fun getActivityText(activity: Activity, option: String): String {
             else -> result = activity.openingHours_en
         }
     }
-
-
     return result
 }
 

@@ -1,4 +1,4 @@
-package com.keepcoding.madridshops.utis
+package com.keepcoding.madridshops.tools
 
 val INTENT_SHOP_DETAIL = "com.keepcoding.madridshops.utis.getINTENT_SHOP_DETAIL"
 val INTENT_ACTIVITY_DETAIL = "com.keepcoding.madridshops.utis.getINTENT_ACTIVITY_DETAIL"

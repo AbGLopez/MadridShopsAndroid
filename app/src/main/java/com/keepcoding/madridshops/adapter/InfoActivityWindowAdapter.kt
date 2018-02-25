@@ -10,7 +10,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 import com.keepcoding.madridshops.R
 import com.keepcoding.madridshops.domain.model.Activity
-import com.keepcoding.madridshops.utis.getActivityText
+import com.keepcoding.madridshops.tools.getActivityText
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.info_window_adapter.view.*

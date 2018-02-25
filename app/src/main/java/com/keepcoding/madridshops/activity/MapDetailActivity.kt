@@ -4,17 +4,17 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.keepcoding.madridshops.R
 import com.keepcoding.madridshops.domain.model.Activity
-import com.keepcoding.madridshops.utis.GOOGLE_MAP_URL
-import com.keepcoding.madridshops.utis.INTENT_ACTIVITY_DETAIL
-import com.keepcoding.madridshops.utis.getActivityText
+import com.keepcoding.madridshops.tools.GOOGLE_MAP_URL
+import com.keepcoding.madridshops.tools.INTENT_ACTIVITY_DETAIL
+import com.keepcoding.madridshops.tools.getActivityText
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_activity_detail.*
+import kotlinx.android.synthetic.main.activity_map_detail.*
 
-class ActivityDetailActivity : AppCompatActivity() {
+class MapDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_activity_detail)
+        setContentView(R.layout.activity_map_detail)
 
         val activity = intent.getSerializableExtra(INTENT_ACTIVITY_DETAIL) as Activity
 
