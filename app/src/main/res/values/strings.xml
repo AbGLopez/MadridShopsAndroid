@@ -2,7 +2,7 @@
     <string name="app_name">MadridShops</string>
     <string name="action_settings">Settings</string>
     <string name="image_description">shop_image_description</string>
-    <string name="shops_button_text">Shops</string>
+    <string name="shops_button_text">Go Shopping</string>
     <string name="activities_button_text">Activities</string>
     <string name="madridshops_title">Madrid Shops</string>
 </resources>

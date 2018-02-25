@@ -32,8 +32,8 @@ fun getButtonText(option: String): String {
 
     if (option == "Shop") {
         when (getLanguage()) {
-            "es" -> result = "Tiendas"
-            else -> result = "Shops"
+            "es" -> result = "Ver tiendas"
+            else -> result = "Show Shops"
         }
     } else if (option == "Activity") {
         when (getLanguage()) {

@@ -18,6 +18,6 @@
     <dimen name="height_image_detail">150dp</dimen>
     <dimen name="margin_default_detail">8dp</dimen>
     <dimen name="margin_big_detail">16dp</dimen>
-    <dimen name="text_size_main_title">25sp</dimen>
+    <dimen name="text_size_main_title">40sp</dimen>
     <dimen name="width_button_main">150dp</dimen>
 </resources>
