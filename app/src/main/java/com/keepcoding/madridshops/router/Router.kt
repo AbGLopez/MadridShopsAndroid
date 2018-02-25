@@ -1,15 +1,13 @@
 package com.keepcoding.madridshops.router
 
 import android.content.Intent
-import com.keepcoding.madridshops.activity.MainActivity
-import com.keepcoding.madridshops.activity.PicassoActivity
-
+import com.keepcoding.madridshops.activity.*
+import com.keepcoding.madridshops.domain.model.Activity
+import com.keepcoding.madridshops.domain.model.Shop
+import com.keepcoding.madridshops.utis.INTENT_ACTIVITY_DETAIL
+import com.keepcoding.madridshops.utis.INTENT_SHOP_DETAIL
 
 class Router {
-
-    fun navigateFromMainActivityToPicassoActivity(main: MainActivity) {
-        main.startActivity(Intent(main, PicassoActivity::class.java))
-    }
 
     fun navigateFromShopActivityToShopDetailActivity(currentActivity: ShopActivity, shop: Shop) {
         val intent = Intent(currentActivity, ShopDetailActivity::class.java)
@@ -32,5 +30,12 @@ class Router {
         currentActivity.startActivity(intent)
     }
 
+    fun navigateFromMainActivityToActivityActivity(currentActivity: MainActivity) {
+        val intent = Intent(currentActivity, ActivityActivity::class.java)
+
+        currentActivity.startActivity(intent)
+    }
 
 }
+
+

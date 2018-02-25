@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkInternetStatus() {
         InternetStatusInteractorImpl().execute(this, success = {
+
             enableButtons()
             setupButtons()
 
@@ -43,14 +44,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun disableButtons() {
         shop_button.visibility = View.INVISIBLE
-        }
+    }
 
     private fun enableButtons() {
         shop_button.visibility = View.VISIBLE
-        }
+    }
 
     private fun setupButtons() {
         shop_button.text = getButtonText("Shop")
+
         shop_button.setOnClickListener { Router().navigateFromMainActivityToShopActivity(this) }
     }
 }

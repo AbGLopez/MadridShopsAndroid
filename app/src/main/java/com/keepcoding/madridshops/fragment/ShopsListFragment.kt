@@ -29,7 +29,7 @@ class ShopsListFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        // Creando la lista
+        // Se crea la lista
         inflater?.let {
             root = it.inflate(R.layout.fragment_list, container, false)
 

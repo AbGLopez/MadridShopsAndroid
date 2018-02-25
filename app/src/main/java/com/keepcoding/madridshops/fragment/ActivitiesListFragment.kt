@@ -33,8 +33,7 @@ class ActivitiesListFragment : Fragment() {
             root = it.inflate(R.layout.fragment_list, container, false)
 
             activityRecyclerView = root.findViewById(R.id.recycler_view) as RecyclerView
-            activityRecyclerView.layoutManager = GridLayoutManager(
-                    activity, resources.getInteger(R.integer.recycler_columns))
+            activityRecyclerView.layoutManager = GridLayoutManager(activity, resources.getInteger(R.integer.recycler_columns))
             activityRecyclerView.itemAnimator = DefaultItemAnimator()
 
             adapter = ActivityRecyclerViewAdapter(activities)

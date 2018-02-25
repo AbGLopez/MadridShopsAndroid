@@ -35,6 +35,11 @@ fun getButtonText(option: String): String {
             "es" -> result = "Tiendas"
             else -> result = "Shops"
         }
+    } else if (option == "Activity") {
+        when (getLanguage()) {
+            "es" -> result = "Actividades"
+            else -> result = "Activities"
+        }
     }
     return result
 }

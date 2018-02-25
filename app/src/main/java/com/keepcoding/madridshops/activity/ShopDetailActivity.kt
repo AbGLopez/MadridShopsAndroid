@@ -7,6 +7,7 @@ import com.keepcoding.madridshops.domain.model.Shop
 import com.keepcoding.madridshops.utis.GOOGLE_MAP_URL
 import com.keepcoding.madridshops.utis.INTENT_SHOP_DETAIL
 import com.keepcoding.madridshops.utis.getShopText
+import com.keepcoding.madridshops.utis.INTENT_SHOP_DETAIL
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_shop_detail.*
 

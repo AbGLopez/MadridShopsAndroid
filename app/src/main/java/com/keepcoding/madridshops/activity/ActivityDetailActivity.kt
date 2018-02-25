@@ -26,7 +26,7 @@ class ActivityDetailActivity : AppCompatActivity() {
         Picasso
                 .with(this)
                 .load(activity.imageURL)
-                // .placeholder(android.R.drawable.ic_delete)
+                .placeholder(android.R.drawable.ic_delete)
                 .into(activity_image)
 
         val googleMapUrl = GOOGLE_MAP_URL + activity.latitude + "," + activity.longitude
@@ -34,7 +34,7 @@ class ActivityDetailActivity : AppCompatActivity() {
         Picasso
                 .with(this)
                 .load(googleMapUrl)
-                //.placeholder(android.R.drawable.ic_delete)
+                .placeholder(android.R.drawable.ic_delete)
                 .into(activity_google_map)
     }
 }

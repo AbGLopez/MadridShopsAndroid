@@ -7,56 +7,53 @@ import com.keepcoding.madridshops.domain.interactor.SuccessCompletion
 import com.keepcoding.madridshops.domain.interactor.getallshops.GetAllShopsInteractorImpl
 import com.keepcoding.madridshops.domain.model.Shops
 
+class MadridShopsApp : MultiDexApplication() {
 
-/*
-
-- UI(App) --> Interactor --> Repository --> Cache --> Network / DB
-
-Borrado cache:
-- UI(App) --> Interactor --> Repository --> Cache.delete
-Model <----- Model <-> Entity <------ Entity <---- Entity
-
-GetAllShops:
-- UI(App) --> Interactor(GetAllShopsInteractor) --> Repository(getAllShops) --> Cache.getAllShops --> DAO Cache.isValid
-Repository(getAllShops) --> Network.getAllShops
-Repository(getAllShops) --> Cache.cacheAllShops --> DAO
-
- */
-
-class MadridShopsApp: MultiDexApplication() {
-
+    /*
+    Se ejecuta cuando se lanza la aplicación
+    */
     override fun onCreate() {
         super.onCreate()
+
+        // Init code application wide
+
         Log.d("App", "onCreate")
+
         Log.d("App", BuildConfig.MADRID_SHOPS_SERVER_URL)
 
         val allShopsInteractor = GetAllShopsInteractorImpl(this)
 
-        allShopsInteractor.execute(object: SuccessCompletion<Shops> {
-            override fun successCompletion(shops: Shops) {
-                Log.d("Shops", "Count: " + shops.count())
+        allShopsInteractor.execute(object : SuccessCompletion<Shops> {
+            override fun successCompletion(element: Shops) {
+                Log.d("Shops", "Count: " + element.count())
 
-                shops.shops.forEach { Log.d("Shop", it.name) }
+                element.shops.forEach{
+                    Log.d("Shop", it.name)
+                }
             }
-        }, object: ErrorCompletion {
+        }, object : ErrorCompletion {
             override fun errorCompletion(errorMessage: String) {
-                Log.d("ERROR", errorMessage)
+                Log.d("Error", errorMessage)
             }
         })
-
 
         /*
-
         DeleteAllShopsImpl(this).execute(success = {
-            Log.d("success", "success")
+            Log.d("Success", "Success")
         }, error = {
-            Log.d("error", "error deleting " + it)
-
+            Log.d("Error", "Error")
         })
-    */
+        */
     }
 
+    /*
+
+    */
     override fun onLowMemory() {
         super.onLowMemory()
+
+
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.adapter.madridshops.adapter
+package com.keepcoding.madridshops.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
