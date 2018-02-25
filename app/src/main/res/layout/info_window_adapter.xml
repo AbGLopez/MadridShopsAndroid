@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_padding"
+    tools:context="com.keepcoding.madridshops.adapter.InfoShopWindowAdapter">
+
+    <ImageView
+        android:id="@+id/info_window_image"
+        android:layout_width="@dimen/info_window_image_width"
+        android:layout_height="@dimen/info_window_image_height"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background"
+        android:contentDescription="contentDescription Image" />
+
+    <TextView
+        android:id="@+id/info_window_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/info_window_image"
+        android:paddingStart="@dimen/default_padding"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_title"
+        tools:text="Text of shop name"/>
+
+    <TextView
+        android:id="@+id/info_window_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/info_window_image"
+        android:layout_below="@id/info_window_name"
+        android:paddingTop="@dimen/default_padding"
+        android:paddingStart="@dimen/default_padding"
+        android:textStyle="italic"
+        android:textSize="@dimen/text_size_small"
+        tools:text="Text of shop opening hours"/>
+
+</RelativeLayout>

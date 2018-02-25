@@ -1,21 +1,39 @@
 package com.keepcoding.madridshops.domain.model
 
-import java.util.*
+import java.io.Serializable
 
 /**
- * Shop: represents one Shop
- *
+ * Shop: represents one Shops
  */
-data class Shop(val id: Int, val name: String, val address: String) {
+data class Shop(val id: Long,
+                val name: String,
+                val description_en: String,
+                val description_es: String,
+                val latitude: Double?,
+                val longitude: Double?,
+                val imageURL: String,
+                val logoURL: String,
+                val openingHours_en: String,
+                val openingHours_es: String,
+                val address: String,
+                val telephone: String,
+                val url: String): Serializable {
     init {
-       Shops(ArrayList<Shop>())
+        Shops(ArrayList<Shop>())
     }
 }
 
-class Shops(val shops: MutableList<Shop>): Aggregate<Shop> {
-    override fun count(): Int = shops.size
+/**
+ * Métodos de shops
+ */
+data class Shops(val shops: MutableList<Shop>) : Aggregate<Shop> {
+    override fun count(): Int {
+        return shops.size
+    }
 
-    override fun all(): List<Shop> = shops
+    override fun all(): List<Shop> {
+        return shops
+    }
 
     override fun get(position: Int): Shop {
         return shops.get(position)
@@ -32,4 +50,6 @@ class Shops(val shops: MutableList<Shop>): Aggregate<Shop> {
     override fun delete(element: Shop) {
         shops.remove(element)
     }
+
+
 }

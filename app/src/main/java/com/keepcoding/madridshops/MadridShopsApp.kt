@@ -27,14 +27,8 @@ class MadridShopsApp: MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
-        // init code application wide
-
         Log.d("App", "onCreate")
-
         Log.d("App", BuildConfig.MADRID_SHOPS_SERVER_URL)
-
-
 
         val allShopsInteractor = GetAllShopsInteractorImpl(this)
 

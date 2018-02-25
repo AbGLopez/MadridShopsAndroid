@@ -10,6 +10,7 @@ public final class ShopJava {
 
     public ShopJava(String name) {
         this.name = name;
+
     }
 
     public int getId() {
@@ -24,9 +25,9 @@ public final class ShopJava {
         return name;
     }
 
+    // Se indica que name no puede cambiar (final) y que no puede pasar Null
     public void setName(final @NonNull String name) {
-        // name = "pepe";  // tiro en el pie
-        assert(name != null);
+        assert (name != null);
         this.name = name;
     }
 
@@ -39,26 +40,21 @@ public final class ShopJava {
     }
 
     {
-       ShopJava shop1 = new ShopJava("Tienda 1");
-       shop1.setAddress("address");
-       shop1.getAddress();
+        ShopJava shop1 = new ShopJava("Tienda 1");
+        shop1.setAddress("Address");
+        shop1.getAddress();
     }
 }
 /*
 class HijaDeShop extends ShopJava {
-
     public HijaDeShop(String name) {
         super(name);
     }
 
     @Override
     public void setAddress(String address) {
-        // super.setAddress(address);
-        // algo totalmente distinto
+        //super.setAddress(address);
+        // No se llama a super y se realiza otra acción distinta
     }
 }
 */
-// SOLID
-
-
-

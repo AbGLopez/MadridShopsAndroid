@@ -9,12 +9,13 @@ import com.keepcoding.madridshops.domain.model.Shops
 import java.util.*
 
 class GetAllShopsInteractorFakeImpl: GetAllShopsInteractor {
-    override fun execute(success: SuccessCompletion<Shops>, error: ErrorCompletion) {
-        var allOk = true
+
+    override fun execute(success: SuccessCompletion<Shops>, error: ErrorCompletion){
+        var allOK = false
 
         // connect to the repository
 
-        if (allOk) {
+        if (allOK) {
             val shops = createFakeListOfShops()
 
             success.successCompletion(shops)
@@ -23,12 +24,13 @@ class GetAllShopsInteractorFakeImpl: GetAllShopsInteractor {
         }
     }
 
+    // Se recibe un Lamda (código) y no devuelve nada
     fun execute(success: SuccessClosure, error: ErrorClosure) {
-        var allOk = true
+        var allOK = true
 
         // connect to the repository
 
-        if (allOk) {
+        if (allOK) {
             val shops = createFakeListOfShops()
 
             success(shops)
@@ -40,12 +42,26 @@ class GetAllShopsInteractorFakeImpl: GetAllShopsInteractor {
     fun createFakeListOfShops(): Shops {
         val list = ArrayList<Shop>()
 
-        for (i in 0..100) {
-            val shop = Shop(i, address = "Shop " + i, name = "Address " + i)
+        for (index in 0..100) {
+            val shop = Shop(index.toLong(),
+                    name = "Shop " + index,
+                    description_en = "",
+                    description_es = "",
+                    latitude = 1.0,
+                    longitude = 1.0,
+                    imageURL = "image",
+                    logoURL = "logo",
+                    openingHours_en = "Hours",
+                    openingHours_es = "Hours",
+                    telephone = "",
+                    url = "",
+                    address = "Address " + index)
             list.add(shop)
         }
 
         val shops = Shops(list)
         return shops
+
     }
+
 }

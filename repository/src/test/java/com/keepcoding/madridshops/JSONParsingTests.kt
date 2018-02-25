@@ -1,8 +1,6 @@
 package com.keepcoding.madridshops
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException
-import com.keepcoding.madridshops.repository.model.ShopEntity
-import com.keepcoding.madridshops.repository.model.ShopsResponseEntity
 import com.keepcoding.madridshops.repository.network.json.JsonEntitiesParser
 import com.keepcoding.madridshops.util.ReadJsonFile
 import junit.framework.Assert.*

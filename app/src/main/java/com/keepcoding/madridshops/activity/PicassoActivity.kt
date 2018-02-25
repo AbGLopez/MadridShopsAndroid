@@ -12,29 +12,24 @@ class PicassoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picasso)
 
-        Picasso.with(this).setIndicatorsEnabled(true)
-        Picasso.with(this).isLoggingEnabled = true
+        Picasso.with(this)
+                .setIndicatorsEnabled(true)
+        Picasso.with(this)
+                .isLoggingEnabled = true
 
+        Picasso.with(this)
+                .load("https://heroichollywood.b-cdn.net/wp-content/uploads/2017/06/Spider-Man-Game.jpg?x42694")
+                .placeholder(android.R.drawable.ic_delete)
+                .into(img1)
 
-        Picasso.
-                with(this).
-                load("http://stillcracking.com/wp-content/uploads/2014/05/c5731d46405fb1226cad6eef30c99ce145e7894eb7948b4180e78e0b3a32aaca_1.jpg").
-                placeholder(android.R.drawable.ic_delete).
-                into(img1)
+        Picasso.with(this)
+                .load("https://orig00.deviantart.net/6340/f/2010/272/a/e/doctor_strange_by_cinar-d2zq6hr.jpg")
+                .placeholder(android.R.drawable.ic_btn_speak_now)
+                .into(img2)
 
-
-        Picasso.
-                with(this).
-                load("http://i0.kym-cdn.com/photos/images/newsfeed/000/716/080/f27.jpg").
-                placeholder(android.R.drawable.ic_btn_speak_now).
-                into(img2)
-
-
-        Picasso.
-                with(this).
-                load("https://i.redd.it/b8n95p73ild01.jpg").
-                placeholder(android.R.drawable.ic_input_add).
-                into(img3)
-
+        Picasso.with(this)
+                .load("https://static.comicvine.com/uploads/screen_kubrick/0/6063/5078196-tokyo.jpg")
+                .placeholder(android.R.drawable.ic_dialog_alert)
+                .into(img3)
     }
 }

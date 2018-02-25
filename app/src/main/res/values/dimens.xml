@@ -1,3 +1,23 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="shop_list_image_size">40dp</dimen>
+    <dimen name="margin_min">4dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="activity_horizontal_padding">0dp</dimen>
+    <dimen name="activity_map_height">280dp</dimen>
+    <dimen name="activity_list_height">300dp</dimen>
+    <dimen name="progress_bar_width">100dp</dimen>
+    <dimen name="progress_bar_height">100dp</dimen>
+    <dimen name="default_padding">5dp</dimen>
+    <dimen name="info_window_image_width">80dp</dimen>
+    <dimen name="info_window_image_height">80dp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="height_image_detail">150dp</dimen>
+    <dimen name="margin_default_detail">8dp</dimen>
+    <dimen name="margin_big_detail">16dp</dimen>
+    <dimen name="text_size_main_title">25sp</dimen>
+    <dimen name="width_button_main">150dp</dimen>
 </resources>

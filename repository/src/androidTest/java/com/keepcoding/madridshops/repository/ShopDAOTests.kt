@@ -5,7 +5,6 @@ import android.support.test.runner.AndroidJUnit4
 import android.util.Log
 import com.keepcoding.madridshops.repository.db.build
 import com.keepcoding.madridshops.repository.db.dao.ShopDAO
-import com.keepcoding.madridshops.repository.model.ShopEntity
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
