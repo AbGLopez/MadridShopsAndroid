@@ -52,7 +52,7 @@ class ShopRecyclerViewAdapter(val shopList: Shops?) :
             Picasso
                     .with(itemView.context)
                     .load(shop.logoURL)
-                    .placeholder(android.R.drawable.ic_delete)
+                    .placeholder(R.drawable.default_no_image)
                     .into(shopImage)
 
             // TODO mostar formato hora en función idioma

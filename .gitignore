@@ -8,3 +8,4 @@
 /captures
 .externalNativeBuild
 /app/src/main/res/values/config.xml
+/app/src/main/res/values/apikey.xml

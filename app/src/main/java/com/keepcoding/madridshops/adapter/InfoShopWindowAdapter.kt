@@ -31,7 +31,7 @@ class InfoShopWindowAdapter(val context: Context) : GoogleMap.InfoWindowAdapter 
             Picasso
                     .with(context)
                     .load(shop.logoURL)
-                    .placeholder(android.R.drawable.ic_delete)
+                    .placeholder(R.drawable.default_no_image)
                     .into(shopImage, MarkerCallback(m, shop.logoURL, shopImage, context))
         }
 
@@ -55,7 +55,7 @@ class MarkerCallback(val marker: Marker,
             Picasso
                     .with(context)
                     .load(url)
-                    .placeholder(android.R.drawable.ic_delete)
+                    .placeholder(R.drawable.default_no_image)
                     .into(imageView)
 
             marker.showInfoWindow()

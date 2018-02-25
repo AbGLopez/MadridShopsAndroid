@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/activity_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="393dp"
+            android:layout_height="70dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_image"
-            tools:text="TESTING SHOP DETAIL" />
+            tools:text="SHOP DETAIL SCREEN" />
 
         <TextView
             android:id="@+id/activity_description"
@@ -45,7 +45,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_name"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+            tools:text="Lorem fistrum no puedor condemor por la gloria de mi madre. Por la gloria de mi madre ese que llega pupita pupita. Amatomaa quietooor ese que llega benemeritaar a wan tiene musho peligro condemor. Papaar papaar pecador quietooor te va a hasé pupitaa. Te va a hasé pupitaa torpedo fistro condemor torpedo llevame al sircoo ahorarr hasta luego Lucas ese pedazo de." />
 
         <TextView
             android:id="@+id/activity_address"
@@ -58,7 +58,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_description"
-            tools:text="c/longlonglong address to the maginc shop, number 42, Narnia - Mordor" />
+            tools:text="ADDRESS" />
 
         <TextView
             android:id="@+id/activity_hours"
@@ -73,15 +73,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_address"
-            tools:text="monday, tuesday and all days in the year from -1:00h to 26:00h" />
+            tools:text="Open HOURS" />
 
         <ImageView
             android:id="@+id/activity_google_map"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="392dp"
+            android:layout_height="118dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_hours"
             tools:src="@mipmap/ic_launcher" />

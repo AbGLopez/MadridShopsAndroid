@@ -31,7 +31,7 @@ class InfoActivityWindowAdapter(val context: Context) : GoogleMap.InfoWindowAdap
             Picasso
                     .with(context)
                     .load(activity.logoURL)
-                    .placeholder(android.R.drawable.ic_delete)
+                    .placeholder(R.drawable.default_no_image)
                     .into(activityImage, MarkerActivityCallback(m, activity.logoURL, activityImage, context))
         }
 
@@ -55,12 +55,12 @@ class MarkerActivityCallback(val marker: Marker,
             Picasso
                     .with(context)
                     .load(url)
-                    .placeholder(android.R.drawable.ic_delete)
+                    .placeholder(R.drawable.default_no_image)
                     .into(imageView)
 
             marker.showInfoWindow()
         }
     }
 
-    override fun onError() { Log.d("PICASSO", "💩 Error updating pinView image on googleMap.") }
+    override fun onError() { Log.d("PICASSO", "Error updating pinView image on googleMap.") }
 }
